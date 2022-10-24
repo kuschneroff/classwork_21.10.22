@@ -1,5 +1,5 @@
 ﻿/*
-Задача 49: Задайте двумерный массивю Найдите элементы, 
+Задача 49: Задайте двумерный массив. Найдите элементы, 
 у которых оба индекса четные, и замените эти элементы на их квадраты.
 Например, изначально массив выглядел вот так:
 1 4 7 2
@@ -12,7 +12,7 @@ int GetNumber(string message)
     Console.WriteLine(message);
     bool isCorrect = false;
     int result = 0;
-    while (isCorrect)
+    while (!isCorrect)
         if (int.TryParse(Console.ReadLine(), out result))
             isCorrect = true;
         else
@@ -61,7 +61,6 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-
 int row = GetNumber("Введите количество строк: ");
 int column = GetNumber("Введите количество столбцов: ");
 int[,] matrix = InitArray(row, column);
